@@ -1,0 +1,43 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+    .glass-navbar {
+        padding: 0.5rem 1rem;
+        .logo{
+            height: 45px;
+        }
+    }
+    
+    main{
+        h1{
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+    }
+
+    /* Mapa */
+    .mapa{ 
+        iframe{
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    /* Footer */
+    .footer-container {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .footer-columna {
+        width: 90%;
+        text-align: center;
+    }
+    .beneficios-contenedor {
+    grid-template-columns: 1fr; 
+    }
+}

@@ -1,0 +1,12 @@
+
+// RESET
+@use "./sass/base/reset";
+// HOME
+@use "./sass/pages/home";
+//CONTACTO
+@use "./sass/pages/contacto";
+//HELP
+@use "./sass/pages/help";
+//MEDIA QUERY
+@use "./sass/layouts/mq-tablet";
+@use "./sass/layouts/mq-mobile";

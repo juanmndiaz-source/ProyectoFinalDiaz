@@ -1,0 +1,26 @@
+
+
+
+@mixin main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin iconos($size, $color, $margin){
+    font-size: $size;
+    color: $color;
+    margin: $margin;
+    vertical-align: middle;
+}
+
+@mixin boton($color,$padding, $radius){
+    background-color: $color;   
+    padding: $padding;
+    border-radius: $radius;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
