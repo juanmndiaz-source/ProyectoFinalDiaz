@@ -1,0 +1,823 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES */
+body {
+  background-color: #252530;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+/* NAVBAR - BOOTSTRAP */
+.glass-navbar {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 1.5rem;
+}
+.glass-navbar .logo { /* NAVBAR - LOGO */
+  height: 60px;
+}
+.glass-navbar .logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.glass-navbar .nav-link { /* NAVBAR - ENLACES DEL NAVBAR */
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 0.4rem;
+}
+.glass-navbar .nav-link:hover {
+  color: #9333EA;
+}
+
+/* NAVBAR - SACAR BORDE DEL ICONO */
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+
+/* NAVBAR - ICONOS - HOME, TIENDA, CONTACTO, AYUDA */
+header ion-icon {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0 0.5rem 0 0;
+  vertical-align: middle;
+}
+
+/* NAVBAR - HOVER EN LOS ITEMS DEL MENU HAMBURGUESA */
+.icon-btn:hover ion-icon {
+  color: #9333EA;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main h1 { /* H1 CARRUSEL */
+  font-weight: 700;
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+main p { /* PARRAFO CARRUSEL */
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #b8b8b8;
+}
+main .carrusel { /* CONTENEDOR CARRUSEL */
+  background: linear-gradient(to right, #0f172a, #2c3a4e);
+  padding: 4rem;
+  width: 100%;
+  margin: auto;
+}
+main .boton-uno { /* BOTON DEL CARRUSEL */
+  background-color: #9333EA;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  transition: background-color 0.4s ease;
+}
+main .boton-uno a {
+  text-decoration: none;
+  color: #ffffff;
+  vertical-align: middle;
+}
+main .boton-uno:hover {
+  background-color: rgb(23, 23, 145);
+}
+main ion-icon { /* ICONO DE EXPLORAR TIENDA */
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+main .img { /* CONTENEDOR IMAGENES */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #1D222E;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+main .imagen { /* CADA CONTENEDOR INDIVIDUAL DE IMAGEN*/
+  position: relative;
+  border-radius: 12px;
+}
+main .imagen img { /* IMAGENES */
+  width: 320px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 2px solid #514b57;
+  transition: border-color 0.4s ease;
+}
+main .imagen img:hover { /* HOVER DEL BORDE DE LAS IMAGENES */
+  border: 3px solid #9333EA;
+}
+main .texto { /* TEXTO DENTRO DE LAS IMAGENES DE JUEGOS */
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 5px;
+}
+
+.juegos-populares {
+  background-color: #1A1A24;
+  width: 100%;
+  padding: 1rem 2rem 5rem 2rem;
+}
+.juegos-populares h2 {
+  margin-top: 2rem;
+}
+.juegos-populares p {
+  margin-top: auto;
+}
+.juegos-populares .juegos-carousel {
+  margin: 3rem auto;
+  width: 90%;
+  border: 5px solid #252530;
+  display: flex;
+  overflow-x: auto;
+}
+.juegos-populares .juegos-carousel::-webkit-scrollbar {
+  display: none;
+}
+.juegos-populares .juegos-carousel .group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: spin 20s infinite linear;
+  padding-right: 1rem;
+  background-color: #252530;
+}
+.juegos-populares .juegos-carousel .group .juegos-card {
+  flex: 0 0 30rem;
+  height: auto;
+  padding: 1rem;
+  background: #252530;
+  border-radius: 0.2rem;
+  text-align: center;
+  align-items: center;
+}
+.juegos-populares .juegos-carousel .group .juegos-card:hover {
+  background-color: #15151b;
+  transition: background-color 0.3s ease;
+}
+.juegos-populares .juegos-carousel .group .juegos-card img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+/* TRUSTPILOT - CONTENEDOR*/
+.trustpilot {
+  text-align: center;
+  margin-top: 1rem;
+  background-color: #252530;
+}
+.trustpilot p {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.trustpilot-logo {
+  background-color: #1A1A24;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* GRID - BENEFICIOS */
+.beneficios {
+  display: grid;
+  background-color: #1A1A24;
+  color: white;
+  padding: 2rem;
+  text-align: left;
+  width: 100%;
+  justify-items: center;
+}
+.beneficios h2 { /* GRID - ¿Por qué elegirnos? */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+.beneficios h3 { /* GRID - H3 */
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.beneficios p { /* GRID - PARRAFO */
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* GRID - CONTENEDOR */
+.beneficios-contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 80%;
+  border-top: 1px solid #152635;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* GRID - ESTILO_COLUMNAS  */
+.beneficios-columnas {
+  border: 1px solid #152635;
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #1a3042 0%, #1f2850 100%);
+  text-align: center;
+}
+.beneficios-columnas h3 {
+  margin-bottom: 0.5rem;
+}
+.beneficios-columnas p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.beneficios-columnas ion-icon {
+  font-size: 1.5rem;
+  color: #7da8e4;
+  margin: 0 0 1rem 0;
+  vertical-align: middle;
+  padding: 0.7rem;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #233f57 0%, #1f2850 100%);
+  margin-top: 0.5rem;
+}
+
+/* BOOTSTRAP >> SECTION >> ACORDEON */
+.acordion {
+  width: 100%;
+  margin: 4rem auto;
+  padding: 1rem 1rem 3rem 1rem;
+  background-color: #1A1A24;
+}
+.acordion p { /* ACORDION - PARRAFO */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+/* ACCORDION - CADA SLOT DE PREGUNTA */
+.accordion-item {
+  border: none;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+}
+
+/* ACCORDION - TEXTO Y FONDO DE SLOT DE PREGUNTA  */
+.accordion-button, .accordion-body {
+  background-color: #2A2A36;
+  color: #ffffff;
+}
+
+.accordion-button {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.accordion-body {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* FOOTER */
+footer {
+  justify-content: center;
+  padding: 1rem;
+  border-top: 1px solid #444C5E;
+  margin-top: auto;
+  display: flex;
+}
+
+/* FOOTER - CONTENEDOR DE COLUMNAS */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-columna {
+  width: 300px;
+}
+.footer-columna h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.footer-columna p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-columna ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-columna ul li a {
+  color: #b8b8b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-columna ul li a:hover {
+  color: #9333EA;
+}
+
+/* FOOTER - PARTE INFERIOR */
+.footer-abajo {
+  border-top: 1px solid #222;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #b8b8b8;
+}
+
+/* BANNER - GAME STORE - CENTRO DE ASISTENCIA - CENTRO DE AYUDA */
+.titulo_pagina {
+  background: linear-gradient(to right, #581C87, #1B1A25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 200px;
+  width: 100%;
+  color: #ffffff;
+  padding: 0 2rem;
+}
+.titulo_pagina .contenido { /* BANNER - CORRER MAS AL MEDIO */
+  max-width: 800px;
+  margin-left: 6rem;
+}
+.titulo_pagina h1 { /* BANNER - ESTILO H1 */
+  font-weight: 600;
+  margin-bottom: auto;
+}
+.titulo_pagina p { /* BANNER - ESTILO PARRAFO */
+  margin-top: auto;
+  max-width: 800px;
+  color: #cccccc;
+  margin-bottom: 5rem;
+}
+
+/* CONTACTO - TARJETAS DE ASISTENCIA */
+.soporte-tarjetas {
+  background-color: #1A1A24;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: left;
+  display: inline-block;
+  width: 400px;
+}
+.soporte-tarjetas h2 {
+  font-size: 20px;
+  padding: 1rem 0 0.5rem 1rem;
+}
+.soporte-tarjetas p {
+  font-size: 16px;
+  color: #b8b8b8;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0 0 0.5rem 1rem;
+}
+.soporte-tarjetas:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* CONTACTO - BOTON - (CHAT, EMAIL, DISCORD) */
+section .btn {
+  background-color: #9333EA;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto 1rem auto;
+  width: 90%;
+  display: block;
+}
+
+/* CONTACTO - ICONO */
+.soporte-icono ion-icon {
+  font-size: 1.5rem;
+  background-color: #9333EA;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0 0 0.5rem 1rem;
+}
+
+/* MAPA */
+.mapa {
+  background-color: #1A1A24;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 4rem;
+  width: 67%;
+}
+.mapa h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.mapa iframe {
+  border: 2px solid #514b57;
+  border-radius: 10px;
+}
+
+.paypal-info {
+  background-color: #181B21;
+  margin: 1rem 0.5rem;
+  text-align: left;
+  padding: 1rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.paypal-info h3 {
+  color: whitesmoke;
+  font-size: 19.5px;
+  margin-top: 1.4rem;
+}
+.paypal-info p {
+  color: #B0B3BC;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+.paypal-info .paypal-icono {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  background-color: #c2c7ce;
+  padding: 10px;
+  border-radius: 10px;
+}
+.paypal-info .paypal-discord {
+  margin-left: 40rem;
+  display: flex;
+}
+.paypal-info .paypal-discord a {
+  text-decoration: none;
+  color: white;
+  background-color: #232730;
+  padding: 1.2rem;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.paypal-info .paypal-discord a:hover {
+  transition: 0.5s;
+  background-color: #9333EA;
+}
+
+.juegos-tienda {
+  background-color: #1A1A24;
+  width: 80%;
+  padding: 1rem 2rem 5rem 2rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.juegos-tienda h2 {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 2rem;
+  border-bottom: 1px solid #2b2b3b;
+  padding-bottom: 1rem;
+}
+
+.tienda-img {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tienda-imagen {
+  position: relative;
+  border-radius: 12px;
+}
+.tienda-imagen img {
+  width: 322px;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  border: 2px solid #514b57;
+  transition: border-color 0.4s ease;
+}
+.tienda-imagen img:hover { /* HOVER DEL BORDE DE LAS IMAGENES */
+  border: 3px solid #9333EA;
+}
+
+.tienda-beneficios {
+  display: grid;
+  background-color: #1A1A24;
+  color: white;
+  padding: 2rem;
+  text-align: left;
+  width: 80%;
+  justify-items: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.tienda-beneficios h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+.tienda-beneficios h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.tienda-beneficios p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* CENTRO DE AYUDA - FAQ */
+.centro-ayuda {
+  text-align: center;
+  background-color: #252530;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.centro-ayuda .faq {
+  background-color: #1A1A24;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #514b57;
+  margin-bottom: 1rem;
+}
+.centro-ayuda h2 {
+  padding: 2rem;
+}
+.centro-ayuda h3 {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.5rem;
+}
+.centro-ayuda p {
+  text-align: left;
+  color: #b8b8b8;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  /* H1 y párrafos del main */
+  main h1 {
+    font-size: 2.3rem;
+    margin-top: 3rem;
+  }
+  main p {
+    font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+  main .carrusel { /* Carrusel */
+    padding: 2rem;
+  }
+  main .imagen img { /* Imágenes */
+    width: 260px;
+  }
+  /* Banner (titulo_pagina) */
+  .titulo_pagina {
+    height: 180px;
+    padding: 0 1.5rem;
+  }
+  .titulo_pagina .contenido {
+    margin-left: 2rem;
+  }
+  /* Mapa */
+  .mapa {
+    width: 90%;
+    margin: 1rem;
+  }
+  /* Footer */
+  .footer-container {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .footer-columna {
+    width: 45%;
+    text-align: center;
+  }
+  .beneficios-contenedor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .paypal-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .paypal-info .paypal-icono {
+    margin: 0 0 1rem 0;
+  }
+  .paypal-info .paypal-letras {
+    margin-bottom: 1.2rem;
+  }
+  .paypal-info .paypal-discord {
+    margin-left: 0;
+  }
+  .paypal-info .paypal-discord a {
+    display: inline-block;
+  }
+  .tienda-imagen img {
+    width: 260px;
+  }
+  .soporte-tarjetas {
+    width: 28%;
+    margin: 1rem 0.5rem;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+  .soporte-tarjetas h2 {
+    font-size: 18px;
+  }
+  .soporte-tarjetas p {
+    font-size: 14px;
+  }
+}
+/* CELULAR */
+@media (max-width: 600px) {
+  /* NAVBAR */
+  .glass-navbar {
+    padding: 0.5rem 1rem;
+  }
+  .glass-navbar .logo {
+    height: 45px;
+  }
+  main h1 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+  .soporte-tarjetas {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  /* Mapa */
+  .mapa {
+    width: 90%;
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 200px;
+  }
+  /* Footer */
+  .footer-container {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .footer-columna {
+    width: 90%;
+    text-align: center;
+  }
+  .beneficios-contenedor {
+    grid-template-columns: 1fr;
+  }
+  .paypal-info {
+    width: 90%;
+    margin: 1rem auto 1rem auto;
+    padding: 1.8rem 1.2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #181B21;
+  }
+  .paypal-info .paypal-icono {
+    margin: 0 0 1rem 0;
+    width: 50px;
+    height: auto;
+    background-color: #c2c7ce;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .paypal-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.6rem 0;
+  }
+  .paypal-info p {
+    color: #b0b3bc;
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  .paypal-info .paypal-discord {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .paypal-info .paypal-discord a {
+    width: 90%;
+    padding: 1rem;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #232730;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .paypal-info .paypal-discord a ion-icon {
+    font-size: 18px;
+  }
+  .paypal-info .paypal-discord a:hover {
+    background-color: #9333EA;
+    transition: 0.4s;
+  }
+  .tienda-imagen img {
+    width: 100%;
+  }
+  .juegos-tienda {
+    padding: 1rem;
+    width: 90%;
+  }
+  .juegos-tienda h2 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .tienda-beneficios {
+    padding: 1rem;
+    width: 90%;
+  }
+  .tienda-beneficios h2 {
+    font-size: 1.4rem;
+  }
+  .tienda-beneficios p {
+    font-size: 0.85rem;
+  }
+  .titulo_pagina .contenido {
+    margin-top: 2rem;
+    text-align: left;
+    justify-content: left;
+  }
+  .titulo_pagina .contenido h1 {
+    font-size: 1.5rem;
+  }
+  .titulo_pagina .contenido p {
+    font-size: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

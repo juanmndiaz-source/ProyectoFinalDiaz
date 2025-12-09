@@ -1,0 +1,349 @@
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+
+/* NAVBAR - BOOTSTRAP */
+.glass-navbar {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.5rem;
+    .logo{ /* NAVBAR - LOGO */
+        height: 60px;
+        &:hover{
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }   
+    }
+    .nav-link{ /* NAVBAR - ENLACES DEL NAVBAR */
+        color: $color-tipografia;
+        font-weight: 500;
+        margin: 0 0.4rem;
+        &:hover{
+            color: $color-principal;
+        }
+    }
+}
+/* NAVBAR - SACAR BORDE DEL ICONO */
+.navbar-dark .navbar-toggler {
+    border: none;
+}
+
+/* NAVBAR - ICONOS - HOME, TIENDA, CONTACTO, AYUDA */
+header ion-icon {
+    @include iconos (1.1rem, $color-tipografia, 0 0.5rem 0 0);
+}
+
+
+/* NAVBAR - HOVER EN LOS ITEMS DEL MENU HAMBURGUESA */
+.icon-btn:hover ion-icon {
+    color: $color-principal;
+}
+
+/* MAIN */
+main{
+    @include main;
+        h1{ /* H1 CARRUSEL */
+            font-weight: 700;
+            font-size: 3rem;
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+        }
+        p{ /* PARRAFO CARRUSEL */
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: $color-tipografia-secundaria;
+        }
+        .carrusel{ /* CONTENEDOR CARRUSEL */
+            background: linear-gradient(to right, #0f172a, #2c3a4e);
+            padding: 4rem;
+            width: 100%;
+            margin: auto;
+            
+        }
+        .boton-uno{ /* BOTON DEL CARRUSEL */
+            @include boton ($color-principal,1rem 2rem, $radio-borde);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            transition: background-color 0.4s ease;
+            a{
+                text-decoration: none;
+                color: $color-tipografia;
+                vertical-align: middle;
+            }
+            &:hover{
+                background-color: rgb(23, 23, 145);
+            }
+        } 
+        ion-icon{ /* ICONO DE EXPLORAR TIENDA */
+            @include iconos (20px, $color-tipografia, 0 8px 0 0);
+        }
+        .img{ /* CONTENEDOR IMAGENES */
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #1D222E;
+            padding: 1rem;
+            border-radius: $radio-borde;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .imagen{ /* CADA CONTENEDOR INDIVIDUAL DE IMAGEN*/
+            position: relative;
+            border-radius: 12px;
+            img{ /* IMAGENES */
+                width: 320px;
+                height: auto;
+                display: block;
+                border-radius: 12px;
+                border: 2px solid $border-color;
+                transition: border-color 0.4s ease;
+                &:hover{ /* HOVER DEL BORDE DE LAS IMAGENES */
+                border: 3px solid $color-principal;
+            }
+            }
+        }
+        .texto{ /* TEXTO DENTRO DE LAS IMAGENES DE JUEGOS */
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(15, 23, 42, 0.8);
+            color: $color-tipografia;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 5px;
+        }
+}
+
+.juegos-populares {
+    background-color: $sections-bg;
+    width: 100%;
+    padding: 1rem 2rem 5rem 2rem;
+    h2 {
+        margin-top: 2rem;
+    }
+
+    p {
+        margin-top: auto;
+    }
+
+    .juegos-carousel {
+        margin: 3rem auto;
+        width: 90%;
+        border: 5px solid #252530;
+        display: flex;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            animation: spin 20s infinite linear;
+            padding-right: 1rem;
+            background-color: #252530;
+            .juegos-card {
+                flex: 0 0 30rem;
+                height: auto;
+                padding: 1rem;
+                background: #252530;
+                border-radius: .2rem;
+                text-align: center;
+                align-items: center;
+                    &:hover {
+                    background-color: #15151b;
+                    transition: background-color 0.3s ease;
+                    }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    from { translate: 0; }
+    to { translate: -100%; }
+}
+
+/* TRUSTPILOT - CONTENEDOR*/
+.trustpilot {
+    text-align: center;
+    margin-top: 1rem;
+    background-color: $body-bg;
+    
+    p{
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-tipografia;
+    }
+}
+.trustpilot-logo {
+    background-color: $sections-bg;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: $radio-borde;
+    margin-bottom: 2rem;
+}
+
+/* GRID - BENEFICIOS */
+.beneficios{
+    display: grid;
+    background-color: $sections-bg;
+    color: white;
+    padding: 2rem;
+    text-align: left;
+    width: 100%;
+    justify-items: center;
+    h2{ /* GRID - ¿Por qué elegirnos? */
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+    h3{ /* GRID - H3 */
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+    p{ /* GRID - PARRAFO */
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: .5rem;
+        text-align: center;
+    }
+}
+/* GRID - CONTENEDOR */
+.beneficios-contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 80%;
+    border-top: 1px solid #152635;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+/* GRID - ESTILO_COLUMNAS  */
+.beneficios-columnas{
+    border: 1px solid #152635;
+    padding: .5rem .5rem .2rem .5rem; 
+    border-radius: 5px;
+    background: linear-gradient(135deg, #1a3042 0%, #1f2850 100%);
+    text-align: center;
+    h3{
+        margin-bottom: 0.5rem;
+    }
+    p{
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    ion-icon{
+        @include iconos (1.5rem, #7da8e4 , 0 0 1rem 0);
+        padding : 0.7rem;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #233f57 0%, #1f2850 100%);
+        margin-top: .5rem;
+    }
+}
+
+/* BOOTSTRAP >> SECTION >> ACORDEON */
+.acordion{
+    width: 100%;
+    margin: 4rem auto;
+    padding: 1rem 1rem 3rem 1rem;
+    background-color: $sections-bg;
+    p{ /* ACORDION - PARRAFO */
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+}
+/* ACCORDION - CADA SLOT DE PREGUNTA */
+.accordion-item {
+    border: none;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+}
+
+/* ACCORDION - TEXTO Y FONDO DE SLOT DE PREGUNTA  */
+.accordion-button, .accordion-body {
+    background-color: #2A2A36;
+    color: $color-tipografia;
+}
+.accordion-button {
+    font-size: 18px;
+    font-weight: 600;
+}
+.accordion-body {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+/* FOOTER */
+footer{
+    justify-content: center;
+    padding: 1rem;
+    border-top: 1px solid #444C5E;
+    margin-top: auto;
+    display: flex;
+}
+/* FOOTER - CONTENEDOR DE COLUMNAS */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-columna {
+    width: 300px;
+    h3{
+        color: $color-tipografia;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            margin-bottom: 0.5rem;
+            a{
+                color: $color-tipografia-secundaria;
+                text-decoration: none;
+                transition: color 0.2s ease;
+                &:hover{
+                    color: $color-principal;
+                }
+            }
+        }
+    }
+}
+/* FOOTER - PARTE INFERIOR */
+.footer-abajo{
+    border-top: 1px solid #222;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: $color-tipografia-secundaria;
+}

@@ -1,0 +1,32 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+/* CENTRO DE AYUDA - FAQ */
+.centro-ayuda{
+    text-align: center;
+    background-color: $body-bg;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    .faq{
+        background-color: $sections-bg;
+        padding: 1rem;
+        border-radius: $radio-borde;
+        border: 1px solid $border-color;
+        margin-bottom: 1rem;
+    }
+    h2{
+        padding: 2rem;
+    }
+    h3{
+        margin-bottom: .5rem;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    p{
+        text-align: left;
+        color: $color-tipografia-secundaria;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}

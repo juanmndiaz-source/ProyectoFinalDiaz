@@ -1,0 +1,90 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+
+@media (max-width: 1024px) {
+
+    /* H1 y párrafos del main */
+    main{
+
+        h1{
+            font-size: 2.3rem;
+            margin-top: 3rem;
+        }
+        p{
+            font-size: 1rem;
+            margin: 1rem 2rem;
+        }
+        .carrusel{/* Carrusel */
+            padding: 2rem;
+        }
+        .imagen{
+            img{ /* Imágenes */
+                width: 260px;
+            }
+        }
+    }
+    /* Banner (titulo_pagina) */
+    .titulo_pagina {
+        height: 180px;
+        padding: 0 1.5rem;
+        .contenido{
+            margin-left: 2rem;
+        }
+    }
+    /* Mapa */
+    .mapa {
+        width: 90%;
+        margin: 1rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    .footer-columna {
+    width: 45%;
+    text-align: center;
+    }
+    .beneficios-contenedor {
+    grid-template-columns: repeat(2, 1fr);
+    }
+        .paypal-info {
+        flex-direction: column;
+        text-align: center;
+
+        .paypal-icono {
+            margin: 0 0 1rem 0;
+        }
+
+        .paypal-letras {
+            margin-bottom: 1.2rem;
+        }
+
+        .paypal-discord {
+            margin-left: 0;
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
+    .tienda-imagen img {
+        width: 260px;
+    }
+
+    .soporte-tarjetas{
+        width: 28%;
+        margin: 1rem .5rem;
+        padding: 1rem 2rem 1rem 1rem;
+        h2{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    
+}

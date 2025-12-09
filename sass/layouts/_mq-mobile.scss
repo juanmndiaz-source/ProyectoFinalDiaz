@@ -1,0 +1,159 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+    .glass-navbar {
+        padding: 0.5rem 1rem;
+        .logo{
+            height: 45px;
+        }
+    }
+    
+    main{
+        h1{
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+    }
+
+    .soporte-tarjetas{
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    /* Mapa */
+    .mapa{ 
+        width: 90%;
+        iframe{
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    /* Footer */
+    .footer-container {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .footer-columna {
+        width: 90%;
+        text-align: center;
+    }
+    .beneficios-contenedor {
+    grid-template-columns: 1fr; 
+    }
+    
+    .paypal-info {
+        width: 90%;
+        margin: 1rem auto 1rem auto;
+        padding: 1.8rem 1.2rem;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        background-color: #181B21;
+
+        .paypal-icono {
+            margin: 0 0 1rem 0;
+            width: 50px;
+            height: auto;
+            background-color: #c2c7ce;
+            padding: 10px;
+            border-radius: $radio-borde;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin: 0 0 .6rem 0;
+        }
+
+        p {
+            color: #b0b3bc;
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .paypal-discord {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                width: 90%;
+                padding: 1rem;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .4rem;
+
+                background-color: #232730;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+
+                ion-icon {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    background-color: $color-principal;
+                    transition: .4s;
+                }
+            }
+        }
+    }
+
+.tienda-imagen img {
+        width: 100%;
+}
+
+.juegos-tienda {
+    padding: 1rem;
+    width: 90%;
+
+    h2 {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+}
+
+
+.tienda-beneficios {
+    padding: 1rem;
+    width: 90%;
+    h2 {
+            font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+}
+
+.titulo_pagina{
+    .contenido{
+        margin-top: 2rem;
+        text-align: left;
+        justify-content: left;
+        h1{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+    }
+}
+    
+}

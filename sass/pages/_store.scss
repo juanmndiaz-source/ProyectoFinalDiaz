@@ -1,0 +1,132 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+// ====== PAYPAL - INFO ======
+.paypal-info {
+    background-color: #181B21;
+    margin: 1rem .5rem;
+    text-align: left;
+    padding: 1rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+
+    h3 {
+        color: whitesmoke;
+        font-size: 19.5px;
+        margin-top: 1.4rem;
+    }
+
+    p {
+        color: #B0B3BC;
+        font-size: 15px;
+        line-height: 1.4;
+        margin-top: .5rem;
+    }
+
+    .paypal-icono {
+        width: 50px;
+        height: auto;
+        margin-bottom: 10px;
+        margin-right: 1.5rem;
+        margin-left: 1rem;
+        background-color: #c2c7ce;
+        padding: 10px;
+        border-radius: $radio-borde;
+    }
+
+    .paypal-discord {
+        margin-left: 40rem;
+        display: flex;
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #232730;
+            padding: 1.2rem;
+            border-radius: 5px;
+            font-size: 13px;
+
+            &:hover {
+                transition: .5s;
+                background-color: $color-principal;
+            }
+        }
+    }
+}
+
+
+// ====== JUEGOS - TIENDA ======
+.juegos-tienda{
+    background-color: $sections-bg;
+    width: 80%;
+    padding: 1rem 2rem 5rem 2rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+    h2{
+        margin: .5rem 0 1rem 0;
+        font-size: 2rem;
+        border-bottom: 1px solid #2b2b3b;
+        padding-bottom: 1rem;
+    }
+}
+
+// ====== CONTENEDOR IMAGENES ======
+.tienda-img{ 
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: $radio-borde;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// ====== CADA IMAGEN ======
+.tienda-imagen{ 
+    position: relative;
+    border-radius: 12px;
+        img{ 
+            width: 322px;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+            border: 2px solid $border-color;
+            transition: border-color 0.4s ease;
+                &:hover{ /* HOVER DEL BORDE DE LAS IMAGENES */
+                border: 3px solid $color-principal;
+                }
+        }
+}
+
+// ====== BENEFICIOS - TIENDA ======
+.tienda-beneficios{
+    display: grid;
+    background-color: $sections-bg;
+    color: white;
+    padding: 2rem;
+    text-align: left;
+    width: 80%;
+    justify-items: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    h2{ 
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+    h3{ 
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+    p{ 
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: .5rem;
+        text-align: center;
+    }
+    
+}

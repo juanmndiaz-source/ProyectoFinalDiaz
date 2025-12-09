@@ -1,0 +1,14 @@
+
+// RESET
+@use "./base/reset";
+// HOME
+@use "./pages/home";
+//CONTACTO
+@use "./pages/contacto";
+//TIENDA
+@use "./pages/store";
+//HELP
+@use "./pages/help";
+//MEDIA QUERY
+@use "./layouts/mq-tablet";
+@use "./layouts/mq-mobile";

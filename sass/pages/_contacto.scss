@@ -1,0 +1,94 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+
+/* BANNER - GAME STORE - CENTRO DE ASISTENCIA - CENTRO DE AYUDA */
+.titulo_pagina {
+    background: linear-gradient(to right, #581C87, #1B1A25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 200px;
+    width: 100%;
+    color: $color-tipografia;
+    padding: 0 2rem;
+    .contenido{ /* BANNER - CORRER MAS AL MEDIO */
+        max-width: 800px;
+        margin-left: 6rem;
+    }
+    h1{ /* BANNER - ESTILO H1 */
+        font-weight: 600;
+        margin-bottom: auto;
+    }
+    p{ /* BANNER - ESTILO PARRAFO */
+        margin-top: auto;
+        max-width: 800px;
+        color: #cccccc;
+        margin-bottom: 5rem;
+    }
+}
+
+/* CONTACTO - TARJETAS DE ASISTENCIA */
+.soporte-tarjetas {
+    background-color: $sections-bg;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: left;
+    display: inline-block;
+    width: 400px;
+    h2{
+        font-size: 20px;
+        padding: 1rem 0 .5rem 1rem;
+    }
+    p{
+        font-size: 16px;
+        color: $color-tipografia-secundaria;
+        margin: .5rem 0 .5rem 0;
+        padding: 0 0 .5rem 1rem;
+    }
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+    }
+}
+
+/* CONTACTO - BOTON - (CHAT, EMAIL, DISCORD) */
+section .btn {
+    background-color: $color-principal;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto 1rem auto;
+    width: 90%;
+    display: block;
+}
+
+/* CONTACTO - ICONO */
+.soporte-icono ion-icon{
+    font-size: 1.5rem;
+    background-color: $color-principal;
+    padding: 1rem;
+    border-radius: $radio-borde;
+    margin: 0 0 .5rem 1rem;
+}
+
+/* MAPA */
+.mapa {
+    background-color: $sections-bg;
+    padding: 2rem;
+    border-radius: $radio-borde;
+    margin-bottom: 4rem;
+    width: 67%;
+    h2{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    iframe{
+        border: 2px solid $border-color;
+        border-radius: $radio-borde;
+    }
+}
